@@ -1107,6 +1107,366 @@ const Language_s language_portuguese = {
     }
 };
 
+const Language_s language_chinese = {
+    .normal_instructions = 
+    {
+        {
+            .info_line = NULL,
+            .instructions = {
+                {
+                    "\uE000 安装主题",
+                    "\uE001 加入随机列表Queue shuffle theme"
+                },
+                {
+                    "\uE002 更多选项More options",
+                    "\uE003 预览主题Preview theme"
+                },
+                {
+                    "\uE004 ？切换到启动图界面Switch to splashes",
+                    "\uE005 扫描二维码Scan QR code"
+                },
+                {
+                    "退出Exit",
+                    "从SD卡中删除Delete from SD"
+                }
+            }
+        },
+        {
+            .info_line = NULL,
+            .instructions = {
+                {
+                    "\uE000 安装启动图Install splash",
+                    "\uE001 删除已安装的启动图Delete installed splash"
+                },
+                {
+                    "\uE002 更多选项More options",
+                    "\uE003 预览启动图Preview splash"
+                },
+                {
+                    "\uE004 切换到主题界面Switch to themes",
+                    "\uE005 扫描二维码Scan QR code"
+                },
+                {
+                    "退出Exit",
+                    "从SD卡中删除Delete from SD"
+                }
+            }
+        }
+    },
+
+    .install_instructions =
+    {
+        .info_line = "\uE001 取消安装主题Cancel theme install",
+        .instructions = {
+            {
+                "\uE079 普通安装Normal install",
+                "\uE07A ？随机安装Shuffle install"
+            },
+            {
+                "\uE07B 只安装背景音乐BGM-only install",
+                "\uE07C 安装（无背景音）No-BGM install"
+            },
+            {
+                NULL,
+                NULL
+            },
+            {
+                "退出Exit",
+                NULL
+            }
+        }
+    },
+
+    .extra_instructions = 
+    {
+        {
+            .info_line = "\uE001 退出排序设置Leave sorting menu",
+            .instructions = {
+                {
+                    "\uE079 按名称排序Sort by name",
+                    "\uE07A 按作者排序Sort by author"
+                },
+                {
+                    "\uE07B 按文件名排序Sort by filename",
+                    NULL
+                },
+                {
+                    NULL,
+                    NULL
+                },
+                {
+                    "退出Exit",
+                    NULL
+                }
+            }
+        },
+        {
+            .info_line = "\uE001 退出额外菜单Leave extra menu",
+            .instructions = {
+                {
+                    "\uE079 Jump in the list",
+                    "\uE07A 重新加载损坏的图标Reload broken icons"
+                },
+                {
+                    "\uE07B 浏览主题广场（ThemePlaza）Browse ThemePlaza",
+                    "\uE07C Install Badges"
+                },
+                {
+                    "\uE004 ？排序菜单Sorting menu",
+                    "\uE005 Dumping menu"
+                },
+                {
+                    "退出Exit",
+                    NULL
+                }
+            }
+        },
+        {
+            .info_line = "\uE001 Leave dump menu",
+            .instructions = {
+                {
+                    "\uE079 Dump Current Theme",
+                    "\uE07A Dump All Themes"
+                },
+                {
+                    NULL,
+                    NULL
+                },
+                {
+                    NULL,
+                    NULL
+                },
+                {
+                    "Exit",
+                    NULL
+                }
+            }
+        }
+    },
+    .camera = 
+    {
+        .quit = "按 \uE005 退出Press \uE005 To Quit",
+        .thread_error = "摄像头线程创建失败\n请向开发者报告错误Capture cam thread creation failed\nPlease report this to the developers",
+        .zip_not_theme_splash = "下载的zip文件不是启动图或主题包Zip downloaded is neither\na splash nor a theme",
+        .file_not_zip = "下载的文件不是zip压缩包File downloaded isn't a zip.",
+        .download_failed = "下载失败Download failed.",
+    },
+    .draw = 
+    {
+        .theme_mode = "主题模式Theme mode",
+        .splash_mode = "启动图模式Splash mode",
+        .no_themes = "未发现主题No theme found",
+        .no_splashes = "未发现启动图No splash found",
+        .qr_download = "按 \uE005 以扫描二维码下载Press \uE005 to download from QR",
+        .switch_splashes = "或按 \uE004 切换至启动图菜单Or \uE004 to switch to splashes",
+        .switch_themes = "或按 \uE004 切换至主题菜单Or \uE004 to switch to themes",
+        .quit = "或        退出Or        to quit",
+        .start_pos = 162, // Adjust x pos of start glyph to line up with quit string
+        .by = "By ",
+        .selected = "已选：Selected:",
+        .sel = "已选：Sel.:",
+        .tp_theme_mode = "主题广场主题模式ThemePlaza Theme mode",
+        .tp_splash_mode = "主题广场启动图模式ThemePlaza Splash mode",
+        .tp_badge_mode = "ThemePlaza Badge mode",
+        .search = "搜索⋯⋯Search...",
+        .page = "？页：Page:",
+        .err_quit = "按 \uE000 退出Press \uE000 to quit.",
+        .warn_continue = "按 \uE000 继续Press \uE000 to continue.",
+        .yes_no = "\uE000 确定   \uE001 取消\uE000 Yes   \uE001 No",
+        .load_themes = "正在加载主题，请稍候⋯⋯Loading themes, please wait...",
+        .load_splash = "正在加载启动图，请稍候⋯⋯Loading splashes, please wait...",
+        .load_icons = "正在加载图标，请稍候⋯⋯Loading icons, please wait...",
+        .install_splash = "正在安装启动图Installing a splash...",
+        .delete_splash = "正在删除启动图Deleting installed splash...",
+        .install_theme = "正在安装一个主题Installing a single theme...",
+        .install_shuffle = "Installing shuffle themes...",
+        .install_bgm = "正在安装背景音乐Installing BGM-only theme...",
+        .install_no_bgm = "正在安装主题（无背景音）Installing theme without BGM...",
+        .downloading = "正在下载Downloading...",
+        .checking_dl = "正在检查下载的文件Checking downloaded file...",
+        .delete_sd = "正在从SD卡中删除Deleting from SD...",
+        .download_themes = "正在下载主题列表，请稍候Downloading theme list, please wait...",
+        .download_splashes = "正在下载启动图列表，请稍候Downloading splash list, please wait...",
+        .download_badges = "Downloading badge list, please wait...",
+        .download_preview = "正在下载预览图，请稍候Downloading preview, please wait...",
+        .download_bgm = "正在下载背景音乐，请稍候Downloading BGM, please wait...",
+        .dump_single = "Dumping theme, please wait...",
+        .dump_all_official = "Dumping official themes, please wait...",
+        .install_badges = "Installing badges, please wait...",
+        .shuffle = "Shuffle: %i/10",
+    },
+    .fs =
+    {
+        .illegal_input = "输入不能包含这些字符：\nInput must not contain:\n" ILLEGAL_CHARS,
+        .new_or_overwrite = "输入新文件名或点击覆盖Choose a new filename or tap Overwrite",
+        .cancel = "取消Cancel",
+        .overwrite = "覆盖Overwrite",
+        .rename = "重命名Rename",
+        .swkbd_fail = "？？？\n尝试用USB外接键盘???\nTry a USB keyboard", // Should never be used
+        .sd_full = "SD卡存储空间已满\n请删除一些主题SD card is full.\nDelete some themes to make space.",
+        .fs_error = "错误：\n请换一张SD卡Error:\nGet a new SD card.",
+    },
+    .loading =
+    {
+        .no_preview = "未发现预览图No preview found.",
+    },
+    .main =
+    {
+        .position_too_big = "The new position has to be\nsmaller or equal to the\nnumber of entries!",
+        .position_zero = "The new position has to\nbe positive!",
+        .jump_q = "Where do you want to jump to?\nMay cause icons to reload.",
+        .cancel = "Cancel",
+        .jump = "Jump",
+        .no_theme_extdata = "Theme extdata does not exist!\nSet a default theme from the home menu.",
+        .loading_qr = "正在加载二维码扫描器Loading QR Scanner...",
+        .no_wifi = "扫描二维码前请先连接无线网络Please connect to Wi-Fi before scanning QR codes",
+        .qr_homebrew = "QR scanning doesnt work from the Homebrew\nLauncher, use the ThemePlaza browser instead.",
+        .camera_broke = "摄像头似乎有问题\n无法扫描二维码Your camera seems to have a problem,\nunable to scan QR codes.",
+        .too_many_themes = "选择了太多主题You have too many themes selected.",
+        .not_enough_themes = "需要多选一些主题You don't have enough themes selected.",
+        .uninstall_confirm = "确定要删除已安装的启动图吗？Are you sure you would like to delete\nthe installed splash?",
+        .delete_confirm = "确定要删除吗？Are you sure you would like to delete this?",
+    },
+    .remote =
+    {
+        .no_results = "未搜索到相关内容No results for this search.",
+        .check_wifi = "无法从主题广场下载\n请检查网络连接Couldn't download Theme Plaza data.\nMake sure WiFi is on.",
+        .new_page_big = "The new page has to be\nsmaller or equal to the\nnumber of pages!",
+        .new_page_zero = "The new position has to\nbe positive!",
+        .jump_page = "Which page do you want to jump to?",
+        .cancel = "取消Cancel",
+        .jump = "Jump",
+        .tags = "Which tags do you want to search for?",
+        .search = "搜索Search",
+        .parental_fail = "Parental Control validation failed!\nBrowser Access restricted.",
+        .zip_not_found = "ZIP not found at this URL\nIf you believe this is an error, please\ncontact the site administrator",
+        .generic_httpc_error = "Error in HTTPC sysmodule - 0x%08lx.\nIf you are seeing this, please contact an\nAnemone developer on the Theme Plaza Discord.",
+        .http303_tp = "HTTP 303 See Other (Theme Plaza)\nHas this theme been approved?",
+        .http303 = "HTTP 303 See Other\nDownload the resource directly\nor contact the site administrator.",
+        .http404 = "HTTP 404 Not Found\nHas this theme been approved?",
+        .http_err_url = "HTTP %s\nCheck that the URL is correct.",
+        .http_errcode_generic = "HTTP %s\nContact the site administrator.",
+        .http401 = "401 Unauthorized",
+        .http403 = "403 Forbidden",
+        .http407 = "407 Proxy Authentication Required",
+        .http414 = "HTTP 414 URI Too Long\nThe QR code points to a really long URL.\nDownload the file directly.",
+        .http418 = "HTTP 418 I'm a teapot\nContact the site administrator.",
+        .http426 = "HTTP 426 Upgrade Required\nThe 3DS cannot connect to this server.\nContact the site administrator.",
+        .http451 = "HTTP 451 Unavailable for Legal Reasons\nSome entity is preventing access\nto the host server for legal reasons.",
+        .http500 = "HTTP 500 Internal Server Error\nContact the site administrator.",
+        .http502 = "HTTP 502 Bad Gateway\nContact the site administrator.",
+        .http503 = "HTTP 503 Service Unavailable\nContact the site administrator.",
+        .http504 = "HTTP 504 Gateway Timeout\nContact the site administrator.",
+        .http_unexpected = "HTTP %u\nIf you believe this is unexpected, please\ncontact the site administrator.",
+    },
+    .remote_instructions =
+    {
+        {
+            .info_line = NULL,
+            .instructions = {
+                {
+                    "\uE000 Download theme",
+                    "\uE001 Go back"
+                },
+                {
+                    "\uE002 More options",
+                    "\uE003 Preview theme"
+                },
+                {
+                    "\uE004 Previous page",
+                    "\uE005 Next page"
+                },
+                {
+                    "Exit",
+                    NULL
+                }
+            }
+        },
+        {
+            .info_line = NULL,
+            .instructions = {
+                {
+                    "\uE000 Download splash",
+                    "\uE001 Go back"
+                },
+                {
+                    "\uE002 More options",
+                    "\uE003 Preview splash"
+                },
+                {
+                    "\uE004 Previous page",
+                    "\uE005 Next page"
+                },
+                {
+                    "Exit",
+                    NULL
+                }
+            }
+        },
+        {
+            .info_line = NULL,
+            .instructions = {
+                {
+                    "\uE000 Download badges",
+                    "\uE001 Go back"
+                },
+                {
+                    "\uE002 More options",
+                    "\uE003 Preview badges"
+                },
+                {
+                    "\uE004 Previous page",
+                    "\uE005 Next page"
+                },
+                {
+                    "Exit",
+                    NULL
+                }
+            }
+        }
+    },
+    .remote_extra_instructions =
+    {
+        .info_line = "\uE001 Leave extra menu",
+        .instructions = {
+            {
+                "\uE079 Jump to page",
+                "\uE07A Search tags"
+            },
+            {
+                "\uE07B Toggle splash/theme",
+                "\uE07C Reload without cache"
+            },
+            {
+                NULL,
+                NULL
+            },
+            {
+                "Exit",
+                NULL
+            }
+        }
+    },
+    .splashes =
+    {
+        .no_splash_found = "No splash.bin or splashbottom.bin found.\nIs this a splash?",
+        .splash_disabled = "WARNING: Splashes are disabled in Luma Config",
+    },
+    .themes =
+    {
+        .no_body_found = "No body_LZ.bin found - is this a theme?",
+        .mono_warn = "One or more installed themes use mono audio.\nMono audio causes a number of issues.\nCheck the wiki for more information.",
+        .illegal_char = "Illegal character used.",
+        .name_folder = "Name of output folder",
+        .cancel = "Cancel",
+        .done = "Done"
+    },
+    .badges = 
+    {
+        .extdata_locked = "Ext Data Locked\nTry pressing the Home Button and then returning\nto Anemone3DS, or using the CIA version instead."
+    }
+};
+
 Language_s init_strings(CFG_Language lang)
 {
     switch (lang)
